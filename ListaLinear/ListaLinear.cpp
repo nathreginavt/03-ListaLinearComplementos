@@ -123,10 +123,8 @@ void inserirElemento()
 void excluirElemento()
 {
 	int busca;
-
 	cout << "Digite o elemento que deseja excluir: ";
 	cin >> busca;
-
 	int i = posicaoElemento(busca);
 
 	if (i != -1) {
@@ -146,7 +144,7 @@ void excluirElemento()
 void buscarElemento()
 {
 	int valor;
-	cout << "Digite o elemento que queira buscar: ";
+	cout << "Digite o elemento que queira buscar: "; 
 	cin >> valor;
 	int pos = posicaoElemento(valor);
 
