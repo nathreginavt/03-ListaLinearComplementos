@@ -1,5 +1,7 @@
 # Lista Linear
 
+**Nathália Regina Vieira Teixeira** - nathalia.teixeira@fatec.sp.gov.br
+
 Faça um fork deste repositorio e implemente a função exlcuirElemento
 
 **excluirElemento:**
