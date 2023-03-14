@@ -14,7 +14,7 @@ int posicaoElemento(int valor);
 //--------------------------
 
 
-const int MAX = 10;;
+const int MAX = 10;
 int lista[MAX]{};
 int nElementos = 0;
 
@@ -122,18 +122,23 @@ void inserirElemento()
 
 void excluirElemento()
 {
-	int busca;
+	int exc;
 	cout << "Digite o elemento que deseja excluir: ";
-	cin >> busca;
-	int i = posicaoElemento(busca);
+	cin >> exc;
 
-	if (i != -1) {
-		lista[i] = 0;
-		nElementos--;
+	int pos = posicaoElemento(exc);
 
-		for (int n = i; n < nElementos; n++) {
+	if (nElementos == 0) {
+
+		cout << "Lista vazia";
+
+	}else if (pos != -1) {
+
+		for (int n = pos; n < nElementos; n++)
+		{
 			lista[n] = lista[n + 1];
 		}
+		nElementos--;
 	}
 	else {
 		cout << "Elemento nao encontrado." << endl;
@@ -159,10 +164,14 @@ void buscarElemento()
 int posicaoElemento(int busca)
 {
 	int posicao = -1;
-	for (int i = 0; i < nElementos; i++) {
-		if (busca == lista[i]) {
+
+	for (int i = 0; i < nElementos; i++) 
+	{
+		if (busca == lista[i]) 
+		{
 			posicao = i;
 		}
 	}
+
 	return posicao;
 }
